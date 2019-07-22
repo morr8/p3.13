@@ -65,22 +65,22 @@ int main()
     }
     if (integer >= 500)
     {
+        integer -= 500;
         roman_numeral += "D";
-        if (integer >= 800)
+        if (integer >= 100)
         {
             roman_numeral += "C";
             integer -= 100;
-            if (integer >= 700)
+            if (integer >= 100)
             {
                 roman_numeral += "C";
                 integer -= 100;
-                if (integer >= 600)
+                if (integer >= 100)
                 {
                     roman_numeral += "C";
                     integer -= 100;
                 }
             }
-            integer -= 500;
         }
     }
     if (integer >= 400)
@@ -110,22 +110,22 @@ int main()
     }
     if (integer >= 50)
     {
+        integer -= 50;
         roman_numeral += "L";
-        if (integer >= 80)
+        if (integer >= 10)
         {
             roman_numeral += "X";
             integer -= 10;
-            if (integer >= 70)
+            if (integer >= 10)
             {
                 roman_numeral += "X";
                 integer -= 10;
-                if (integer >= 60)
+                if (integer >= 10)
                 {
                     roman_numeral += "X";
                     integer -= 10;
                 }
             }
-            integer -= 50;
         }
     }
     if (integer >= 40)
@@ -156,21 +156,24 @@ int main()
     if (integer >= 5)
     {
         roman_numeral += "V";
-        if (integer >= 8)
+        if (integer >= 5)
         {
-            roman_numeral += "I";
-            integer -= 1;
-            if (integer >= 7)
+            integer -= 5;
+            if (integer >= 1)
             {
                 roman_numeral += "I";
                 integer -= 1;
-                if (integer >= 6)
+                if (integer >= 1)
                 {
                     roman_numeral += "I";
                     integer -= 1;
+                    if (integer >= 1)
+                    {
+                        roman_numeral += "I";
+                        integer -= 1;
+                    }
                 }
             }
-            integer -= 5;
         }
     }
     if (integer >= 4)
@@ -184,7 +187,8 @@ int main()
             if (integer >= 1)
             {
                 roman_numeral += "I";
-                integer -= 1;if (integer >= 1)
+                integer -= 1;
+                if (integer >= 1)
                 {
                     roman_numeral += "I";
                     integer -= 1;
