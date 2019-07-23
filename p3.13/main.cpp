@@ -180,6 +180,11 @@ int main()
     {
         roman_numeral += "IV";
         integer -= 4;
+    }
+    if (integer >= 1)
+    {
+        roman_numeral += "I";
+        integer -= 1;
         if (integer >= 1)
         {
             roman_numeral += "I";
@@ -188,11 +193,6 @@ int main()
             {
                 roman_numeral += "I";
                 integer -= 1;
-                if (integer >= 1)
-                {
-                    roman_numeral += "I";
-                    integer -= 1;
-                }
             }
         }
     }
